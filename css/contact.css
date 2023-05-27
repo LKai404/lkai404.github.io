@@ -1,0 +1,27 @@
+
+svg{
+    width: 40px;
+    height: 40px;
+}
+
+.main-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.main-area ul{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-area li{
+    flex: 1;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

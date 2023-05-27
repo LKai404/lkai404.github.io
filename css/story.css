@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+html {
+    background: url('../images/background.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+article {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(0, 0, 0, 0.29);
+    min-width: 300px;
+    max-width: 1000px;
+    position: absolute;
+    top: 100px;
+    padding: 30px;
+}
+
+
+.grow-item {
+    display: flex;
+    justify-content: space-between;
+    height: 180px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+
+.grow-item .time-line {
+    position: relative;
+    height: auto;
+    padding: 59px 146px 0 38px;
+    border-left: 1px solid #e5e6e9;
+}
+
+.grow-item:last-child .time-line:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -7px;
+    width: 14px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: #e5e6e9;
+    transform: perspective(4px) rotateX(12deg);
+}
+
+.grow-item .time-line .time-line-dot {
+    position: absolute;
+    left: -10px;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: solid 1px #d2d3d4;
+}
+
+.grow-item .time-line .time-line-dot::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f49f16;
+}
+
+.grow-item .time-line .time-line-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #171f31;
+    line-height: 23px;
+}
+
+.grow-item .time-line .time-line-cont {
+    font-size: 14px;
+    color: #353f57;
+    line-height: 24px;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.grow-item .time-line .time-line-cont:hover{
+    color: #FF6347;
+}

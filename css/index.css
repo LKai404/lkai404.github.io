@@ -1,0 +1,229 @@
+.load {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.2px);
+    -webkit-backdrop-filter: blur(13.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.loader {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+
+circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash4 {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -35px;
+    }
+
+    100% {
+        stroke-dashoffset: -125px;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: url('../images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.11);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-weight: 100;
+    z-index: 1;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #FF6347;
+}
+
+nav {
+    margin-inline: auto;
+    max-width: 1000px;
+    min-width: 300px;
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+}
+
+nav li:first-of-type {
+    flex: 3;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    list-style-type: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+
+main {
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-area {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(0, 0, 0, 0.29);
+
+    margin-inline: auto;
+    height: 370px;
+    width: 600px;
+    min-width: 300px;
+    padding: 30px;
+    position: relative;
+    top: -50px;
+}
+
+.main-area img {
+    display: block;
+    width: 100px;
+    margin-inline: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-area h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+.main-area p {
+    text-align: center;
+    margin-top: 20px;
+    color: grey;
+    font-weight: 100;
+}
+
+audio {
+    display: none;
+}
+
+.link {
+    display: flex;
+    width: 250px;
+    height: 50px;
+    margin-inline: auto;
+    margin-top: 30px;
+}
+
+.link li {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link li svg {
+    width: 30px;
+    height: 30px;
+    transition: fill 0.3s;
+}
+
+.link li svg:hover {
+    fill: #FF6347;
+}
+
+.link li:nth-of-type(3) svg {
+    width: 40px;
+    height: 40px;
+    transition: width 0.3s, height 0.3s;
+}
+
+.link li:nth-of-type(3) svg:hover {
+    width: 45px;
+    height: 45px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.blessing {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.blessing:hover {
+    color: #FF6347;
+}
