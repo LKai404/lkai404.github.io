@@ -102,10 +102,6 @@ nav ul {
     height: 100%;
 }
 
-nav li:first-of-type {
-    flex: 3;
-}
-
 nav li {
     display: flex;
     justify-content: center;
