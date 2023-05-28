@@ -26,10 +26,6 @@ nav ul {
     height: 60px;
 }
 
-nav li:first-of-type {
-    flex: 3;
-}
-
 nav li {
     display: flex;
     justify-content: center;
