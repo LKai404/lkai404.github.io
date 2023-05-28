@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my story</title>
+    <title>๑乛◡乛๑</title>
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/story.css" />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">LiuKai's personal homepage</a></li>
+          <li><a href="index.html">home</a></li>
           <li><a href="story.html">story</a></li>
           <li><a href="hobby.html">hobby</a></li>
           <li><a href="contact.html">contact</a></li>
@@ -21,28 +20,70 @@
       </nav>
     </header>
     <main>
-      <article>
-        <div class="grow-item">
-            <div class="time-line">
-                <div class="time-line-dot"></div>
-                <div class="time-line-title">2018~2021</div>
-                <div class="time-line-cont">广东科学技术职业学院(专科)</div>
-                <div class="time-line-cont">珠海金山网络游戏有限公司实习半年</div>
-                <div class="time-line-cont">软件技术专业,软件设计师</div>
-            </div>
-        </div>
-        <div class="grow-item">
-            <div class="time-line">
-                <div class="time-line-dot"></div>
-                <div class="time-line-title">2022至今</div>
-                <div class="time-line-cont">深圳技术大学(专升本)</div>
-                <div class="time-line-cont">四级(准备中),考研(备考中)</div>
-            </div>
-        </div>
-      </article>
-      <section class="blessing">
-        <p>「每一个不曾起舞的日子，都是对生命的辜负。」</p>
-      </section>
+      <h1>从2000到2023</h1>
+      <p>
+        在我人生的道路上，我曾经经历过许多不同的学校和阶段。每一个阶段都让我学会了不同的技能和面对不同的挑战。今天，我想与大家分享我在这个旅程中所经历的三个重要阶段。
+      </p>
+      <p>
+        从深圳第一职业技术学校到广东科学技术职业学院，这是我开始学习编程的地方。在这里，我认识了很多朋友，也开始了我的编程之旅。
+      </p>
+      <img src="images/classroom.jpeg" alt="">
+
+      <p>
+        在这个阶段，我学习了如何使用不同的编程语言和工具来开发各种应用程序。我还学习了如何与其他人合作，如何解决问题和如何快速学习新技能。这个阶段让我感到非常充实和开心。
+      </p>
+      <img src="images/gk.jpg" alt="">
+      <p>
+        深圳技术大学，这是我进入大学的第一站。在这里，我认识了许多优秀的新同学和老师。在这个阶段，我开始准备四级考试和考研。我发现我需要更加努力学习和提高自己的能力，以应对更高的学习压力和更高的学术要求。我花费了很多时间和精力来学习课程，阅读相关文献和进行研究。这个阶段让我深刻地理解到了学习的重要性和如何提高自己的学习效率。
+      </p>
+      <img src="images/sztu.jpg" alt="">
+      <p>
+        回忆走过的路途，一切好的坏的都是路上的风景。在回顾这些经历时，我意识到每一个阶段都是我成长的机会。我学会了不同的技能和知识，也遇到了不同的人和经历。这些经历让我更加坚定了自己的目标和方向，也让我成为一个更加坚强和自信的人。我深信，这些经历将成为我人生中宝贵的财富，让我更加珍惜和感恩生命中的每一个时刻。
+      </p>
+      <img src="images/sun.jpg" alt="">
+      <p>
+        总的来说，我在这个旅程中学到了很多东西，也遇到了很多挑战。但是，我相信这些经历都是值得的。我学会了如何面对挑战和困难，如何在压力下保持冷静和理智，如何与他人合作和沟通。这些技能和经验都将成为我未来发展的基础和支持。
+      </p>
+
+      <p>
+        最后，我想说的是，人生就像一场旅程，每一个阶段都是一个新的起点。我们需要勇敢地面对挑战和困难，积极地学习和成长。只有这样，我们才能在人生的道路上走得更加坚定和自信。
+      </p>
     </main>
+    <footer>
+      <p>「幸福不过是欲望的暂时停止。」</p>
+    </footer>
+    <script>
+      $(document).ready(() => {
+        $(window).scroll(() => {
+          let top = $(document).scrollTop();
+          console.log(top);
+          if (top > 0 && top < 240) {
+            $("nav").css({
+              /* From https://css.glass */
+              background: "rgba(255, 255, 255, 0.21)",
+              "box-shadow": "0 4px 30px rgba(0, 0, 0, 0.1)",
+              "backdrop-filter": "blur(8.9px)",
+              "-webkit-backdrop-filter": "blur(8.9px)",
+            });
+          } else if (top > 240) {
+            $("nav").css({
+              /* From https://css.glass */
+              background: "#1c1c1c",
+              "box-shadow": "0 4px 30px rgba(0, 0, 0, 0.1)",
+              "backdrop-filter": "blur(8.9px)",
+              "-webkit-backdrop-filter": "blur(8.9px)",
+            });
+          } else if (top == 0) {
+            $("nav").css({
+              /* From https://css.glass */
+              background: "",
+              "box-shadow": "",
+              "backdrop-filter": "",
+              "-webkit-backdrop-filter": "",
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
