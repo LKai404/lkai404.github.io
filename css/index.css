@@ -87,7 +87,6 @@ header a:hover {
 nav {
     margin-inline: auto;
     max-width: 1000px;
-    min-width: 300px;
     height: 60px;
 }
 
@@ -121,15 +120,26 @@ main {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.1px);
     -webkit-backdrop-filter: blur(3.1px);
-    border: 1px solid rgba(0, 0, 0, 0.29);
+    /* border: 1px solid white; */
 
     margin-inline: auto;
     height: 370px;
-    width: 600px;
-    min-width: 300px;
     padding: 30px;
     position: relative;
     top: -50px;
+    border-radius: 3px;
+}
+
+@media(min-width:600px){
+    .main-area{
+        width: 600px;
+    }
+}
+
+@media(max-width:599px){
+    .main-area{
+        width: 100%;
+    }
 }
 
 .main-area img {
@@ -137,7 +147,13 @@ main {
     width: 100px;
     margin-inline: auto;
     border-radius: 50%;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.main-area img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .main-area h1 {
